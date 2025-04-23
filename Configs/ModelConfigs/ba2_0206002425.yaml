@@ -1,0 +1,6 @@
+dataset_name: ba2
+layers: 3
+hidden_size: 20
+types: GCN1PoolNorm
+saved_path: ba2_0206002425.pth
+Norm: LayerNorm

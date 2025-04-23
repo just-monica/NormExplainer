@@ -1,0 +1,6 @@
+dataset_name: fc
+layers: 3
+hidden_size: 20
+types: GCN1PoolNorm
+saved_path: fc_0327185525.pth
+Norm: LayerNorm

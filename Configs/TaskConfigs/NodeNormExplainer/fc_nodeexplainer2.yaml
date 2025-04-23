@@ -1,0 +1,31 @@
+dataset_name: fc
+folder: 'dig'
+lr: 0.0003
+wd: 0
+epoch: 100 #正常建议给100
+explanation_type: phenomenon #model or phenomenon
+node_mask_type: object #none, object: N*1, attributes: N*F, common_attributes: 1*F
+edge_mask_type: object #None, object: E*1
+mode: multiclass_classification #multiclass_classification, binary_classification, regression
+task_level: graph
+return_type: raw
+task: binary #use in metrics.py, binary or multiclass
+edge_sparsity: 1.0 #0.9代表只挑选10%的边, 如果是1.0, 代表使用和ground truth相同数量的边
+node_sparsity: 0.7 #0.9代表只挑选10%的节点, 如果是1.0, 代表使用和ground truth相同数量的节点
+coeffs: {
+        'pred': 0.0, #预测损失的系数
+        'norm': 1.0, #范数损失项系数
+        'node_size': 0.001, #节点特征的权重系数
+        'node_reduction': 'sum', #mean代表对节点特征求均值作为正则项
+        'node_ent': 0.0, #节点特征的熵系数
+        'min_size': 0.70,
+        'temp': [5.0, 1.0],
+    }
+batch_size: 256
+norm_p: 2
+split_ratio: 0.8
+calculation_type: 'multiply'
+use_edge_mask: False
+use_binary_concrete: True
+log_norm: False
+filter_dataset: True

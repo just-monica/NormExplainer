@@ -1,0 +1,4 @@
+Norm: 'LayerNorm'
+p: 2
+dim: 1
+Pool: 'global_max_pool'

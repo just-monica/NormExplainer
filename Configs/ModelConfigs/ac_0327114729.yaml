@@ -1,0 +1,6 @@
+dataset_name: ac
+layers: 3
+hidden_size: 20
+types: GCN1PoolNorm
+saved_path: ac_0327114729.pth
+Norm: LayerNorm
